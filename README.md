@@ -11,8 +11,6 @@ Tech stack that I used in this project
 
 ![Screenshot 2023-03-02 101029](https://github.com/PONDHURUSAIGANESH/Saimax-model-to-forecast-the-Sales./assets/78872384/5948d067-bcc0-4862-afca-124249b9811a)
 
-
-```
 # Sales Forecasting using SARIMAX Model
 
 This project implements a Sales Forecasting system using the SARIMAX model. The system consists of a frontend built with Angular, a middleware backend using Flask, and Python for data processing. The predicted sales data can be downloaded, and the results can be visualized in Power BI.
@@ -47,8 +45,6 @@ Make sure you have the following installed:
 
 ```bash
 git clone https://github.com/your-username/sales-forecasting.git
-```
-
 2. Navigate to the project directory:
 
 ```bash
