@@ -1,0 +1,71 @@
+.navbar-header {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../../../assets/Images/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  position: relative;
+}
+
+.floatingCard {
+  position: absolute;
+  bottom: 0%;
+  left: 82%;
+  z-index: 1;
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .navbar-header:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 1300px;
+    height: 100%;
+    background: linear-gradient(
+      to bottom right,
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0)
+    );
+    transform: skew(120deg);
+    z-index: 1;
+  }
+}
+
+@media (min-width: 721px) and (max-width: 1024px) {
+  .navbar-header:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 913px;
+    height: 100%;
+    background: linear-gradient(
+      to bottom right,
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0)
+    );
+    transform: skew(126deg);
+    z-index: 1;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 720px) {
+  .navbar-header:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 720px;
+    height: 100%;
+    background: linear-gradient(
+      to bottom right,
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0)
+    );
+    transform: skew(134deg);
+    z-index: 1;
+  }
+}

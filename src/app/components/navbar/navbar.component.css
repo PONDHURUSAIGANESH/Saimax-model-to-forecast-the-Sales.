@@ -1,0 +1,246 @@
+.sales-logo {
+  width: 50px;
+  height: 50px;
+  margin-right: 0.5em;
+}
+
+.navbar {
+  background-color: #007bff;
+  border-radius: 10px;
+  overflow: hidden;
+  perspective: 800px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand,
+.navbar-text {
+  font-weight: bold;
+  cursor: pointer;
+  color: white !important;
+  transition: color 0.3s;
+  transform-style: preserve-3d;
+  text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.3);
+}
+
+.nav-link {
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 1.5em;
+  white-space: nowrap;
+  color: white !important;
+  transition: color 0.3s;
+  transform-style: preserve-3d;
+  text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.3);
+}
+
+.navbar-brand {
+  margin-left: 1.5em;
+}
+
+.sampleLink {
+  margin-right: 1.2em;
+}
+
+.filledBackground {
+  background-color: #343a40;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.userInfoModal {
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 2em;
+}
+
+.ans {
+  padding-left: 2em;
+}
+
+/* Rounded double edges */
+.navbar::before,
+.navbar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 10px;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.1));
+  z-index: 1;
+  border-radius: 10px;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.navbar::before {
+  left: 0;
+  transform: perspective(800px) rotateY(0deg);
+}
+
+.navbar::after {
+  right: 0;
+  transform: perspective(800px) rotateY(0deg);
+}
+
+/* 3D hover effects */
+.navbar-brand:hover,
+.navbar-text:hover,
+.nav-link:hover {
+  color: #ff3366 !important;
+  transform: perspective(800px) rotateY(10deg);
+}
+
+.dropdown-item:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.modal-header {
+  background-color: #007bff;
+  color: #fff;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transform: perspective(800px) rotateY(0deg);
+  transition: transform 0.5s;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.modal-footer {
+  background-color: #f8f9fa;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  transform: perspective(800px) rotateY(0deg);
+  transition: transform 0.5s;
+  box-shadow: 0px -8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header:hover,
+.modal-footer:hover {
+  transform: perspective(800px) rotateY(10deg);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+ngx-spinner {
+  background-color: rgba(51, 51, 51, 0.8);
+}
+
+p {
+  font-size: 20px;
+  color: white;
+}
+
+/* Glassmorphism effects */
+.modal-content {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Shining effect */
+@keyframes shining {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.navbar-brand::after,
+.nav-link::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  opacity: 0;
+  animation: shining 3s infinite;
+}
+
+.navbar-brand:hover::after,
+.nav-link:hover::after {
+  opacity: 1;
+}
+
+/* Box effect and shining */
+.sales-logo,
+.navbar-brand,
+.navbar-text,
+.nav-link,
+.dropdown-item {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+.dropdown-menu {
+  min-width: 200px; 
+}
+
+
+.sales-logo::before,
+.navbar-brand::before,
+.navbar-text::before,
+.nav-link::before,
+.dropdown-item::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0.4),
+    rgba(255, 255, 255, 0)
+  );
+  transform: rotate(45deg);
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.sales-logo:hover::before,
+.navbar-brand:hover::before,
+.navbar-text:hover::before,
+.nav-link:hover::before,
+.dropdown-item:hover::before {
+  opacity: 1;
+}
+
+.sales-logo::after,
+.navbar-brand::after,
+.navbar-text::after,
+.nav-link::after,
+.dropdown-item::after {
+  content: "";
+  position: absolute;
+  bottom: -50%;
+  right: -50%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to top left,
+    rgba(255, 255, 255, 0.4),
+    rgba(255, 255, 255, 0)
+  );
+  transform: rotate(45deg);
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.sales-logo:hover::after,
+.navbar-brand:hover::after,
+.navbar-text:hover::after,
+.nav-link:hover::after,
+.dropdown-item:hover::after {
+  opacity: 1;
+}

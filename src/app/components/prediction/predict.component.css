@@ -1,0 +1,214 @@
+/* Add CSS styles for the predict dataset section */
+.predictDatasetHeading {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.predictDatasetCard {
+  border-radius: 10px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  transform-style: preserve-3d;
+  transition: transform 0.5s, box-shadow 0.5s;
+  position: relative;
+}
+
+.uploadFileLabel {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.uploadFileDiv {
+  margin-top: 10px;
+}
+
+.fileUploadExtension {
+  font-size: 14px;
+  color: #333;
+}
+
+.fileUploadButton {
+  margin-top: 5px;
+}
+
+.labelTitle {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+#predictColumn {
+  margin-top: 5px;
+}
+
+#periodicity {
+  margin-top: 5px;
+}
+
+.toolTip {
+  font-size: 16px;
+  color: #333;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+.text-danger {
+  color: red;
+}
+
+/* Add 3D effects to the card */
+.predictDatasetCard {
+  transform: perspective(800px) rotateY(0deg);
+}
+
+.predictDatasetCard:hover {
+  transform: perspective(800px) rotateY(10deg);
+  box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* Add attractive 3D background */
+#predictDatasetDiv {
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1)),
+              linear-gradient(135deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.05)),
+              linear-gradient(225deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.05));
+  background-blend-mode: screen;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Add glassmorphism effect */
+.predictDatasetCard::before,
+.predictDatasetCard::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background: inherit;
+  filter: blur(10px);
+  z-index: -1;
+}
+
+.predictDatasetCard::after {
+  filter: blur(20px);
+}
+
+/* Add subtle shine effect */
+.predictDatasetCard::before {
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.15), transparent);
+  animation: shine 1s infinite;
+}
+.predictColumnBox {
+  position: relative;
+  perspective: 800px;
+}
+
+.predictColumnBox input {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+  transform-style: preserve-3d;
+  transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.predictColumnBox:hover input {
+  transform: perspective(800px) rotateY(10deg);
+  box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.2);
+}
+
+.predictColumnBox::before,
+.predictColumnBox::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background: inherit;
+  filter: blur(10px);
+  z-index: -1;
+}
+
+.predictColumnBox::after {
+  filter: blur(20px);
+}
+
+.predictColumnBox::before {
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.15), transparent);
+  animation: shine 1s infinite;
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+
+@keyframes shine {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+.predictionSpinner {
+  perspective: 1000px;
+}
+
+.predictionSpinner div.spinner-wrapper {
+  transform-style: preserve-3d;
+  transform: translateZ(0);
+  transition: transform 0.5s ease;
+}
+
+.predictionSpinner:hover div.spinner-wrapper {
+  transform: rotateY(10deg);
+}
+
+.predictionSpinner div.spinner-wrapper div.spinner-circle {
+  transform: rotateY(0);
+  transition: transform 0.3s ease;
+}
+
+.predictionSpinner:hover div.spinner-wrapper div.spinner-circle {
+  transform: rotateY(180deg);
+}
