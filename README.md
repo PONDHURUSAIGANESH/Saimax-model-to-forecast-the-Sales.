@@ -43,8 +43,8 @@ Make sure you have the following installed:
 
 1. Clone the repository:
 
-```bash
 git clone https://github.com/your-username/sales-forecasting.git
+
 2. Navigate to the project directory:
 
 ```bash
@@ -78,6 +78,25 @@ python app.py
 ```
 
 7. Open your browser and visit [http://localhost:4200](http://localhost:4200) to access the Sales Forecasting application.
+## MongoDB Integration
+
+This project utilizes MongoDB as the database for storing the sales data. MongoDB offers a flexible and scalable solution for data storage and retrieval.
+
+### Prerequisites
+
+Make sure you have MongoDB installed and running on your system. You can download MongoDB from the official website: [link to MongoDB website](https://www.mongodb.com/)
+
+### Configuration
+
+To connect the Flask backend with MongoDB, follow these steps:
+
+1. Open the `config.py` file in the backend directory.
+
+2. Update the MongoDB connection settings with your MongoDB credentials:
+
+   ```python
+   MONGO_URI = 'mongodb://<username>:<password>@<host>:<port>/<database>'
+
 
 ## Usage
 
